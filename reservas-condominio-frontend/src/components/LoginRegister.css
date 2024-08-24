@@ -1,0 +1,249 @@
+/* LoginRegister.css
+/* Establecer la imagen de fondo para el contenedor principal */
+.login-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/public/background-image.jpg'); /* Cambia la ruta por la imagen que desees usar */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    padding: 20px;
+}
+
+/* Un filtro oscuro para mejorar la legibilidad sobre la imagen */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según tu necesidad */
+    z-index: 1;
+}
+
+/* Ajustes para la columna izquierda con información */
+.login-left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.login-left h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.login-left p {
+    font-size: 16px;
+}
+
+/* Ajustes para la columna derecha con el formulario */
+.login-right {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    z-index: 2;
+    width: 100%;
+}
+
+.login-right h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f28118;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f28118;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-btn:hover {
+    background-color: #166fe5;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (min-width: 768px) {
+    .login-container {
+        flex-direction: row;
+    }
+
+    .login-left {
+        text-align: left;
+    }
+
+    .login-right {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-left h1 {
+        font-size: 24px;
+    }
+
+    .login-right {
+        padding: 15px;
+    }
+
+    input {
+        padding: 10px;
+    }
+}
+
+/* Estilo principal para la página de registro */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* Estilo del formulario de registro */
+.register-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+    color: #1877f2;
+}
+
+.register-form .form-group {
+    margin-bottom: 15px;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.register-form .auth-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f28118;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-form .auth-btn:hover {
+    background-color: #f28118;
+}
+
+.register-form p {
+    margin-top: 20px;
+}
+
+.register-form p a {
+    color: #f28118;
+    text-decoration: none;
+}
+
+.register-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para la página de registro */
+@media (max-width: 768px) {
+    .register-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-form {
+        padding: 15px;
+    }
+
+    .register-form h2 {
+        font-size: 20px;
+    }
+
+    .register-form input {
+        padding: 10px;
+    }
+
+    .register-form .auth-btn {
+        font-size: 14px;
+    }
+}
+
+.register-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
